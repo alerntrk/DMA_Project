@@ -1,0 +1,124 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: ali eren turk, maramra, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.37.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
+ 
+<h2>Project:</h2>
+C:\Users\win10\Desktop\Keil_codes\DMA_Projem\DMA_App.uvprojx
+Project File Date:  09/12/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(10): warning: no previous extern declaration for non-static variable 'data_stream' [-Wmissing-variable-declarations]
+char data_stream[] ="Hello World\r\n";
+     ^
+main.c(10): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char data_stream[] ="Hello World\r\n";
+^
+main.c(21): warning: 'return' will never be executed [-Wunreachable-code-return]
+        return 0;
+               ^
+main.c(25): warning: // comments are not allowed in this language [-Wcomment]
+        //button is connected to PA10
+        ^
+main.c(30): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        RCC_TypeDef  *pRCC;
+                      ^
+main.c(26): warning: variable 'pGPIOA' set but not used [-Wunused-but-set-variable]
+        GPIO_TypeDef *pGPIOA;
+                      ^
+main.c(78): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pSTREAM6->CR &= ~( 0x7 << 25);
+                     ~~ ^~~~~~~~~~~~~
+main.c(95): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pSTREAM6->CR &= ~(0x3 << 13); 
+                     ~~ ^~~~~~~~~~~~
+main.c(96): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pSTREAM6->CR &= ~(0x3 << 11);
+                     ~~ ^~~~~~~~~~~~
+main.c(105): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pSTREAM6->FCR &= ~(0x3 << 0); //clearing 
+                      ~~ ^~~~~~~~~~~
+main.c(60): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        DMA_TypeDef *pDMA;
+                     ^
+main.c(60): warning: variable 'pDMA' set but not used [-Wunused-but-set-variable]
+main.c(138): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pGPIOA->MODER &= ~(0x03 << 4);
+                      ~~ ^~~~~~~~~~~~
+main.c(140): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  pGPIOA->AFR[0] &= ~(0x0F << 8);
+                 ~~ ^~~~~~~~~~~~
+main.c(148): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        pGPIOA->MODER &= ~(0x03 << 6);
+                      ~~ ^~~~~~~~~~~~
+main.c(150): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  pGPIOA->AFR[0] &= ~(0x0F << 12);
+                 ~~ ^~~~~~~~~~~~~
+main.c(120): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        GPIO_TypeDef *pGPIOA;
+                      ^
+main.c(183): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+        for ( uint32_t i =0 ; i < len ; i++)
+              ^
+main.c(183): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(181): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        uint32_t len = sizeof(somedata);
+                 ^
+19 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=1024 RO-data=424 RW-data=16 ZI-data=1632  
+".\Objects\DMA_App.axf" - 0 Error(s), 19 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.15.0.pack
+                Keil.STM32F4xx_DFP.2.15.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/win10/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/win10/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
